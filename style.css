@@ -91,7 +91,7 @@ table { width: 100%; border-collapse: collapse; table-layout: fixed; }
 th, td { padding: 12px 10px; border-bottom: 1px solid #f2f2f7; font-size: 14px; text-align: center; }
 
 /* توزيع الأعمدة من اليسار لليمين */
-th:nth-child(1), td:nth-child(1) { text-align: left; width: 35%; } /* الموديل */
+th:nth-child(1), td:nth-child(1) { text-align: left; width: 35%; } /* Model */
 th:nth-child(2), td:nth-child(2) { text-align: center; width: 50%; } /* IMEI */
 th:nth-child(3), td:nth-child(3) { text-align: right; width: 15%; } /* حذف */
 
