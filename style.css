@@ -1,13 +1,13 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-  background-color: #7d7d7d;
+  background-color: #9d9da1;
   margin: 0;
   padding: 10px;
   direction: rtl; /* اتجاه الصفحة العام عربي */
 }
 
-h2 { text-align: center; color: #1c1c1e; margin: 12px 0; }
+h2 { text-align: center; color: #1c1c1e; margin: 10px 0; }
 
 #reader-container {
   position: relative;
