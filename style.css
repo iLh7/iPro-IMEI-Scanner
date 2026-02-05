@@ -94,7 +94,7 @@ table {
 }
 
 th, td { 
-  padding: 5px 8px; /* تقليل المسافات الداخلية قليلاً لتناسب الخط الأصغر */
+  padding: 10px 8px; /* تقليل المسافات الداخلية قليلاً لتناسب الخط الأصغر */
   border-bottom: 1px solid #f2f2f7; 
   font-size: 10px; /* تم تصغير الخط هنا */
   text-align: center; /* توسيط النص للجميع */
@@ -103,8 +103,8 @@ th, td {
 
 /* توزيع عرض الأعمدة مع ضمان التوسط التام */
 th:nth-child(1), td:nth-child(1) { width: 35%; text-align: center; } /* Model */
-th:nth-child(2), td:nth-child(2) { width: 50%; text-align: center; } /* IMEI */
-th:nth-child(3), td:nth-child(3) { width: 15%; text-align: center; } /* Delete */
+th:nth-child(2), td:nth-child(2) { width: 40%; text-align: center; } /* IMEI */
+th:nth-child(3), td:nth-child(3) { width: 25%; text-align: center; } /* Delete */
 
 .toast {
   position: fixed;
