@@ -1,4 +1,3 @@
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
   background-color: #e3e3e3;
@@ -84,16 +83,28 @@ select, .btn-main {
   background: white; 
   border-radius: 14px; 
   margin-top: 25px; 
-  direction: ltr; /* الجدول من اليسار إلى اليمين */
+  direction: ltr; /* الجدول يقرأ من اليسار إلى اليمين كأعمدة */
+  overflow: hidden;
 }
 
-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-th, td { padding: 12px 10px; border-bottom: 1px solid #f2f2f7; font-size: 14px; text-align: center; }
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  table-layout: fixed; 
+}
 
-/* توزيع الأعمدة من اليسار لليمين */
-th:nth-child(1), td:nth-child(1) { text-align: left; width: 35%; } /* Model */
-th:nth-child(2), td:nth-child(2) { text-align: center; width: 50%; } /* IMEI */
-th:nth-child(3), td:nth-child(3) { text-align: right; width: 15%; } /* Delete */
+th, td { 
+  padding: 12px 10px; 
+  border-bottom: 1px solid #f2f2f7; 
+  font-size: 14px; 
+  text-align: center; /* توسيط النص للجميع */
+  vertical-align: middle;
+}
+
+/* توزيع عرض الأعمدة مع ضمان التوسط التام */
+th:nth-child(1), td:nth-child(1) { width: 35%; text-align: center; } /* Model */
+th:nth-child(2), td:nth-child(2) { width: 50%; text-align: center; } /* IMEI */
+th:nth-child(3), td:nth-child(3) { width: 15%; text-align: center; } /* Delete */
 
 .toast {
   position: fixed;
