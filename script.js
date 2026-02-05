@@ -107,7 +107,7 @@ function downloadCSV() {
     if (data.length === 0) return alert("الجدول فارغ!");
     
     // طلب اسم الملف من المستخدم
-    let fileName = prompt("أدخل اسم الملف المراد حفظه:", `Report_${new Date().toLocaleDateString()}`);
+    let fileName = prompt("أدخل اسم الملف  :", `Report_${new Date().toLocaleDateString()}`);
     
     // إذا ضغط المستخدم إلغاء (Cancel)
     if (fileName === null) return;
