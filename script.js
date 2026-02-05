@@ -1,4 +1,3 @@
-
 let data = [], scanLocked = false;
 let currentTotalZoom = 1.0;
 let videoTrack = null;
@@ -103,13 +102,26 @@ function startScanner() {
 
 startScanner();
 
+// وظيفة التحميل مع طلب اسم الملف
 function downloadCSV() {
     if (data.length === 0) return alert("الجدول فارغ!");
+    
+    // طلب اسم الملف من المستخدم
+    let fileName = prompt("أدخل اسم الملف المراد حفظه:", `Report_${new Date().toLocaleDateString()}`);
+    
+    // إذا ضغط المستخدم إلغاء (Cancel)
+    if (fileName === null) return;
+    
+    // إذا ترك الاسم فارغاً، نضع اسماً افتراضياً
+    if (fileName.trim() === "") {
+        fileName = `Report_${new Date().toLocaleDateString()}`;
+    }
+
     let csv = '\uFEFFModel,IMEI\n';
     data.forEach(d => csv += `${d.model},${d.imei}\n`);
     const link = document.createElement("a");
     link.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
-    link.download = `Report_${new Date().toLocaleDateString()}.csv`;
+    link.download = `${fileName}.csv`; // استخدام الاسم الذي اخترته
     link.click();
 }
 
