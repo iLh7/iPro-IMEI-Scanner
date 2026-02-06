@@ -1,12 +1,17 @@
+/* Developed by Louai | Connect 2026 */
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
   background-color: #e3e3e3;
   margin: 0;
   padding: 10px;
   direction: rtl; /* اتجاه الصفحة العام عربي */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* يضمن توسيط جميع العناصر في الصفحة */
 }
 
-h2 { text-align: center; color: #1c1c1e; margin: 10px 0; }
+h2 { text-align: center; color: #1c1c1e; margin: 10px 0; width: 100%; }
 
 #reader-container {
   position: relative;
@@ -70,10 +75,12 @@ h2 { text-align: center; color: #1c1c1e; margin: 10px 0; }
 
 select, .btn-main {
   width: 100%;
+  max-width: 450px; /* لضمان عدم تمدد العناصر بشكل مبالغ فيه على الآيباد */
   padding: 16px;
-  margin: 8px 0;
+  margin: 8px auto;
   border-radius: 12px;
   font-size: 17px;
+  display: block;
 }
 
 .btn-main { background-color: #007bff; color: white; border: none; font-weight: 600; }
@@ -87,25 +94,27 @@ select, .btn-main {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
   direction: ltr;
+  /* التعديل الجوهري للتوسيط */
+  margin: 25px auto 0 auto; 
 }
 
 table { width: 100%; border-collapse: collapse; }
-th { background: #f7fafc; padding: 12px; color: #718096; font-size: 11px; text-transform: uppercase; text-align: center; }
-td { padding: 12px; border-bottom: 1px solid #edf2f7; font-size: 12px; text-align: center; color: #2d3748; }
-
 
 th, td { 
-  padding: 10px 8px; /* تقليل المسافات الداخلية قليلاً لتناسب الخط الأصغر */
+  padding: 10px 8px;
   border-bottom: 1px solid #f2f2f7; 
-  font-size: 10px; /* تم تصغير الخط هنا */
-  text-align: center; /* توسيط النص للجميع */
+  font-size: 10px; 
+  text-align: center; 
   vertical-align: middle;
 }
 
-/* توزيع عرض الأعمدة مع ضمان التوسط التام */
-th:nth-child(1), td:nth-child(1) { width: 35%; text-align: center; } /* Model */
-th:nth-child(2), td:nth-child(2) { width: 40%; text-align: center; } /* IMEI */
-th:nth-child(3), td:nth-child(3) { width: 25%; text-align: center; } /* Delete */
+th { background: #f7fafc; color: #718096; text-transform: uppercase; }
+td { color: #2d3748; }
+
+/* توزيع الأعمدة */
+th:nth-child(1), td:nth-child(1) { width: 35%; text-align: center; } 
+th:nth-child(2), td:nth-child(2) { width: 40%; text-align: center; } 
+th:nth-child(3), td:nth-child(3) { width: 25%; text-align: center; } 
 
 .toast {
   position: fixed;
@@ -119,6 +128,7 @@ th:nth-child(3), td:nth-child(3) { width: 25%; text-align: center; } /* Delete *
   font-weight: 500;
   text-align: center;
 }
+
 .connect-footer {
   text-align: center;
   margin-top: 40px;
@@ -127,8 +137,9 @@ th:nth-child(3), td:nth-child(3) { width: 25%; text-align: center; } /* Delete *
   font-size: 11px;
   border-top: 1px solid #d2d2d7;
   width: 85%;
+  max-width: 480px; /* تناسق مع الجدول */
   margin: 40px auto 20px auto;
   direction: ltr;
 }
-.connect-footer strong { color: #007aff; font-weight: 600; }
 
+.connect-footer strong { color: #007aff; font-weight: 600; }
