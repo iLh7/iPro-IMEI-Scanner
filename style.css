@@ -79,15 +79,15 @@ select, .btn-main {
 .btn-main { background-color: #007bff; color: white; border: none; font-weight: 600; }
 .btn-download { background-color: #34c759; }
 
-table-container {
+.table-container {
   width: 100%;
   max-width: 480px;
   background: white;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-direction: ltr; 
-overflow: hidden;
+  direction: ltr;
+}
 
 table { width: 100%; border-collapse: collapse; }
 th { background: #f7fafc; padding: 12px; color: #718096; font-size: 11px; text-transform: uppercase; text-align: center; }
