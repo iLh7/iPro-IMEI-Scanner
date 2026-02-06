@@ -118,3 +118,16 @@ th:nth-child(3), td:nth-child(3) { width: 25%; text-align: center; } /* Delete *
   font-weight: 500;
   text-align: center;
 }
+.connect-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  color: #86868b;
+  font-size: 11px;
+  border-top: 1px solid #d2d2d7;
+  width: 85%;
+  margin: 40px auto 20px auto;
+  direction: ltr;
+}
+.connect-footer strong { color: #007aff; font-weight: 600; }
+
