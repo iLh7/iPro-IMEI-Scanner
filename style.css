@@ -86,8 +86,8 @@ table-container {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-  direction: ltr;
-}
+direction: ltr; 
+overflow: hidden;
 
 table { width: 100%; border-collapse: collapse; }
 th { background: #f7fafc; padding: 12px; color: #718096; font-size: 11px; text-transform: uppercase; text-align: center; }
