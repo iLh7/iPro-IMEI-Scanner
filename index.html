@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -6,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>iScanner</title>
     <link rel="apple-touch-icon" href="icon.png">
-<link rel="icon" type="image/png" href="icon.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Scanner">
-
+    <link rel="icon" type="image/png" href="icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Scanner">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -54,7 +52,11 @@
         </div>
     </div>
 
-    <button class="btn-main" onclick="addManual()">➕ إضافة يدوية</button>
+    <div class="button-group">
+        <button class="btn-main btn-manual" onclick="addManual()">➕ إضافة يدوية</button>
+        <button class="btn-main btn-refresh" onclick="location.reload()">🔄 تحديث الكاميرا</button>
+    </div>
+    
     <button class="btn-main btn-download" onclick="downloadCSV()">⬇️ حفظ ملف Excel</button>
 
     <div class="table-container">
@@ -73,7 +75,7 @@
     <script src="https://unpkg.com/html5-qrcode"></script>
     <script src="script.js"></script>
     <footer class="connect-footer">
-    Developed by <strong>iPro Louai</strong> | Connect © 2026
-</footer>
+        Developed by <strong>iPro Louai</strong> | Connect © 2026
+    </footer>
 </body>
 </html>
