@@ -143,3 +143,21 @@ th:nth-child(3), td:nth-child(3) { width: 25%; text-align: center; }
 }
 
 .connect-footer strong { color: #007aff; font-weight: 600; }
+/* تنسيق مجموعة الأزرار لتكون أفقية */
+.button-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 450px; /* ليتناسب مع عرض الكاميرا */
+    margin: 8px auto;
+}
+
+.button-group .btn-main {
+    flex: 1; /* يجعل الزرين بنفس العرض */
+    margin: 0; /* إزالة الهوامش التلقائية القديمة */
+}
+
+/* لون مميز لزر التحديث */
+.btn-refresh {
+    background-color: #8e8e93 !important; /* لون رمادي أبل الشهير */
+}
