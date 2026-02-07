@@ -125,11 +125,25 @@ function downloadCSV() {
     link.click();
 }
 
-function addManual() {
+async function addManual() {
+    // 1. إيقاف الكاميرا مؤقتاً قبل فتح نافذة الإدخال لضمان عدم تعليقها
+    if (html5QrCode.getState() === 2) {
+        await html5QrCode.stop();
+    }
+
     let imei = prompt('ادخل IMEI (15 رقم)');
+    
     if (imei && /^[0-9]{15}$/.test(imei)) {
         let model = document.getElementById('model').value;
-        if (model) addRow(imei, model);
-        else alert("⚠️ اختر الموديل أولاً");
+        if (model) {
+            addRow(imei, model);
+            notify("✅ تم الإضافة يدوياً");
+        } else {
+            alert("⚠️ اختر الموديل أولاً");
+        }
     }
+
+    // 2. إعادة تشغيل الكاميرا فوراً بعد إغلاق النافذة
+    startScanner();
 }
+
